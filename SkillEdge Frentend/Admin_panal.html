@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillEdge – Admin Dashboard (Final Mix)</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- libs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <link rel="stylesheet" href="./CSS/Admin_panal.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <div class="mark">SE</div>
+          <div>
+            <h1>SkillEdge <small>Admin Dashboard – Final Mix</small></h1>
+          </div>
+        </div>
+
+        <div class="sideSearch">
+          <span style="opacity: 0.85">🔎</span>
+          <input id="sideSearchInput" placeholder="Search modules..." />
+        </div>
+
+        <div class="menu" id="menu">
+          <!-- Insights -->
+          <div class="acc open" data-acc="insights">
+            <div class="accHead">
+              <b>Insights</b>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accBody">
+              <div
+                class="item active"
+                data-sec="dash"
+                data-key="dashboard analytics overview"
+              >
+                <div class="leftItem">
+                  <div class="ico">📊</div>
+                  <div class="label">
+                    <b>Dashboard</b><span>Analytics overview</span>
+                  </div>
+                </div>
+                <div class="pill">Live</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="reports"
+                data-key="reports revenue export pdf excel"
+              >
+                <div class="leftItem">
+                  <div class="ico">📑</div>
+                  <div class="label">
+                    <b>Reports</b><span>PDF/Excel export</span>
+                  </div>
+                </div>
+                <div class="pill">Export</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academics -->
+          <div class="acc open" data-acc="academics">
+            <div class="accHead">
+              <b>Academics</b>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accBody">
+              <div
+                class="item"
+                data-sec="students"
+                data-key="students enrollment fees batch roll"
+              >
+                <div class="leftItem">
+                  <div class="ico">👨‍🎓</div>
+                  <div class="label">
+                    <b>Students</b><span>Enrollment + fees</span>
+                  </div>
+                </div>
+                <div class="pill" id="pillStudents">0</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="courses"
+                data-key="courses categories curriculum catalog"
+              >
+                <div class="leftItem">
+                  <div class="ico">📚</div>
+                  <div class="label">
+                    <b>Courses & Categories</b><span>Catalog management</span>
+                  </div>
+                </div>
+                <div class="pill" id="pillCourses">0</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="attendance"
+                data-key="attendance sessions month eligibility"
+              >
+                <div class="leftItem">
+                  <div class="ico">🗓️</div>
+                  <div class="label">
+                    <b>Attendance</b><span>Sessions + month</span>
+                  </div>
+                </div>
+                <div class="pill">Auto</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="exams"
+                data-key="exams results export eligibility"
+              >
+                <div class="leftItem">
+                  <div class="ico">📝</div>
+                  <div class="label">
+                    <b>Exams</b><span>Eligibility + export</span>
+                  </div>
+                </div>
+                <div class="pill">PDF/XLS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business -->
+          <div class="acc" data-acc="business">
+            <div class="accHead">
+              <b>Business</b>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accBody">
+              <div
+                class="item"
+                data-sec="payments"
+                data-key="payments invoices subscriptions"
+              >
+                <div class="leftItem">
+                  <div class="ico">💳</div>
+                  <div class="label">
+                    <b>Payments</b><span>Invoices + subscriptions</span>
+                  </div>
+                </div>
+                <div class="pill">₹</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="cert"
+                data-key="certificate templates certification"
+              >
+                <div class="leftItem">
+                  <div class="ico">🏅</div>
+                  <div class="label">
+                    <b>Certificates</b><span>Template manager</span>
+                  </div>
+                </div>
+                <div class="pill">Preview</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Admin -->
+          <div class="acc" data-acc="admin">
+            <div class="accHead">
+              <b>Administration</b>
+              <span class="chev">▾</span>
+            </div>
+            <div class="accBody">
+              <div
+                class="item"
+                data-sec="users"
+                data-key="users roles permissions rbac"
+              >
+                <div class="leftItem">
+                  <div class="ico">🛡️</div>
+                  <div class="label">
+                    <b>Users & Roles</b><span>RBAC access</span>
+                  </div>
+                </div>
+                <div class="pill">RBAC</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="rules"
+                data-key="hr rule minimum attendance eligibility"
+              >
+                <div class="leftItem">
+                  <div class="ico">⚙️</div>
+                  <div class="label">
+                    <b>HR Rule</b><span>Min attendance %</span>
+                  </div>
+                </div>
+                <div class="pill" id="pillRule">75%</div>
+              </div>
+
+              <div
+                class="item"
+                data-sec="system"
+                data-key="system security settings configuration"
+              >
+                <div class="leftItem">
+                  <div class="ico">🔒</div>
+                  <div class="label">
+                    <b>System & Security</b><span>Configuration</span>
+                  </div>
+                </div>
+                <div class="pill">Safe</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sideFooter">
+          <div style="line-height: 1.2">
+            <div style="font-weight: 900; font-size: 13px" id="whoName">
+              SkillEdge Admin
+            </div>
+            <div style="opacity: 0.78; font-size: 12px" id="whoRole">Admin</div>
+          </div>
+          <button class="miniBtn" id="resetDemo">Reset</button>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+        <div class="topbar">
+          <div class="leftTop">
+            <button class="toggle" id="toggleBtn">☰</button>
+            <div class="titleBox">
+              <h2 id="pageTitle">Dashboard</h2>
+              <p id="pageSub">Premium analytics + clean layout</p>
+            </div>
+          </div>
+
+          <div class="globalSearch">
+            <span style="opacity: 0.65">🔎</span>
+            <input
+              id="globalSearch"
+              placeholder="Search students, courses, payments, templates..."
+            />
+          </div>
+
+          <div class="rightTop">
+            <div class="chip">Today: <b id="todayDate"></b></div>
+            <button class="iconBtn" id="helpBtn" title="Help">?</button>
+            <button class="iconBtn" id="notifyBtn" title="Notifications">
+              🔔<span class="badge"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- DASHBOARD -->
+        <section class="section active" id="sec-dash">
+          <div class="heroRow">
+            <div>
+              <h3>SkillEdge Admin Dashboard</h3>
+              <p>
+                Everything from user management to analytics, payments,
+                certificates, reports and exam eligibility — in one premium,
+                clean panel.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="qaAddStudent">
+                + Add Student
+              </button>
+              <button class="btn btnGhost" id="qaAddPayment">
+                + Add Payment
+              </button>
+              <button class="btn btnGhost" id="qaMarkAttendance">
+                Mark Attendance
+              </button>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <small>Total Students</small>
+              <h3 id="kpiStudents">0</h3>
+              <p>Registered learners</p>
+              <div class="accentLine"></div>
+            </div>
+            <div class="stat">
+              <small>Active Courses</small>
+              <h3 id="kpiCourses">0</h3>
+              <p>Published programs</p>
+              <div class="accentLine"></div>
+            </div>
+            <div class="stat">
+              <small>This Month Revenue</small>
+              <h3 id="kpiRevenue">₹ 0</h3>
+              <p>Paid invoices</p>
+              <div class="accentLine"></div>
+            </div>
+            <div class="stat">
+              <small>Pending Payments</small>
+              <h3 id="kpiPending">₹ 0</h3>
+              <p>Outstanding dues</p>
+              <div class="accentLine"></div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Revenue Trend</h4>
+                <span>Last 6 months</span>
+              </div>
+              <div class="cardBody">
+                <canvas id="revChart" height="110"></canvas>
+                <div class="hint">
+                  Payments update the charts automatically (demo +
+                  localStorage).
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="cardHead">
+                <h4>Payments Split</h4>
+                <span>Paid vs Pending</span>
+              </div>
+              <div class="cardBody">
+                <canvas id="payChart" height="140"></canvas>
+                <div class="hint">Use Reports → Export PDF/Excel.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STUDENTS -->
+        <section class="section" id="sec-students">
+          <div class="heroRow">
+            <div>
+              <h3>Students Management</h3>
+              <p>
+                Manage enrollment, batch, roll number, fees status and course
+                mapping — all cleanly organized.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="stAddBtnTop">
+                + Add Student
+              </button>
+              <button class="btn btnGhost" id="stClearSel">
+                Clear Selection
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Student Form</h4>
+                <span>Create / update</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Full Name</label
+                    ><input id="sName" placeholder="e.g., Anjali Verma" />
+                  </div>
+                  <div class="field">
+                    <label>Phone</label
+                    ><input id="sPhone" placeholder="e.g., 9876543210" />
+                  </div>
+                  <div class="field">
+                    <label>Email</label
+                    ><input id="sEmail" placeholder="e.g., anjali@gmail.com" />
+                  </div>
+                </div>
+
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Roll No</label
+                    ><input id="sRoll" placeholder="e.g., SE-101" />
+                  </div>
+                  <div class="field">
+                    <label>Batch</label
+                    ><input id="sBatch" placeholder="e.g., Jan-2026" />
+                  </div>
+                  <div class="field">
+                    <label>Fees Status</label>
+                    <select id="sFees">
+                      <option>Paid</option>
+                      <option>Pending</option>
+                      <option>Partial</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Course</label
+                    ><select id="sCourse"></select>
+                  </div>
+                  <div class="field">
+                    <label>Status</label
+                    ><select id="sStatus">
+                      <option>Active</option>
+                      <option>Inactive</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Join Date</label><input id="sJoin" type="date" />
+                  </div>
+                </div>
+
+                <div class="actions">
+                  <button class="btn btnPrimary" id="addStudentBtn">
+                    + Add
+                  </button>
+                  <button class="btn btnGhost" id="updateStudentBtn" disabled>
+                    Update
+                  </button>
+                  <button class="btn btnDanger" id="deleteStudentBtn" disabled>
+                    Delete
+                  </button>
+                </div>
+
+                <div class="hint">
+                  Tip: Click any row from the list to select & edit.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Students List</h4>
+                <span>Click row to select</span>
+              </div>
+              <div class="cardBody">
+                <div class="tableWrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Roll</th>
+                        <th>Name</th>
+                        <th>Batch</th>
+                        <th>Course</th>
+                        <th>Fees</th>
+                        <th>Status</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Join</th>
+                      </tr>
+                    </thead>
+                    <tbody id="studentsTbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- COURSES -->
+        <section class="section" id="sec-courses">
+          <div class="heroRow">
+            <div>
+              <h3>Course & Category Management</h3>
+              <p>
+                Create categories and manage courses. Students & payments
+                drop-downs auto-sync.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="goAddCourse">
+                + Add Course
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Categories</h4>
+                <span>Organize programs</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Category Name</label
+                    ><input id="catName" placeholder="e.g., Programming" />
+                  </div>
+                  <div class="field">
+                    <label>Visibility</label
+                    ><select id="catVis">
+                      <option>Public</option>
+                      <option>Private</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btnPrimary" id="addCatBtn">
+                    + Add Category
+                  </button>
+                  <button class="btn btnDanger" id="delCatBtn" disabled>
+                    Delete Selected
+                  </button>
+                </div>
+                <div class="tableWrap" style="margin-top: 12px">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Category</th>
+                        <th>Visibility</th>
+                      </tr>
+                    </thead>
+                    <tbody id="catTbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Courses</h4>
+                <span>Create + publish</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Course Title</label
+                    ><input id="cTitle" placeholder="e.g., Python + DSA" />
+                  </div>
+                  <div class="field">
+                    <label>Category</label
+                    ><select id="cCat"></select>
+                  </div>
+                </div>
+
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Price (₹)</label
+                    ><input
+                      id="cPrice"
+                      type="number"
+                      placeholder="e.g., 7999"
+                    />
+                  </div>
+                  <div class="field">
+                    <label>Duration</label
+                    ><input id="cDur" placeholder="e.g., 8 Weeks" />
+                  </div>
+                  <div class="field">
+                    <label>Status</label>
+                    <select id="cStatus">
+                      <option>Published</option>
+                      <option>Draft</option>
+                      <option>Archived</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field" style="margin-top: 12px">
+                  <label>Description</label>
+                  <textarea
+                    id="cDesc"
+                    placeholder="Short overview..."
+                  ></textarea>
+                </div>
+
+                <div class="actions">
+                  <button class="btn btnPrimary" id="addCourseBtn">
+                    + Add
+                  </button>
+                  <button class="btn btnGhost" id="updateCourseBtn" disabled>
+                    Update
+                  </button>
+                  <button class="btn btnDanger" id="archiveCourseBtn" disabled>
+                    Archive
+                  </button>
+                </div>
+
+                <div class="tableWrap" style="margin-top: 12px">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody id="courseTbody"></tbody>
+                  </table>
+                </div>
+
+                <div class="hint">
+                  Note: Archiving hides the course from active selections.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ATTENDANCE -->
+        <section class="section" id="sec-attendance">
+          <div class="heroRow">
+            <div>
+              <h3>Attendance Manager</h3>
+              <p>
+                Create session-wise attendance. Attendance % connects with HR
+                rule for exam eligibility.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="loadAttendance">
+                Load Students
+              </button>
+              <button class="btn btnGhost" id="saveAttendance">
+                Save Attendance
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Session Setup</h4>
+                <span>Course + date + month</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Course</label
+                    ><select id="aCourse"></select>
+                  </div>
+                  <div class="field">
+                    <label>Date</label><input id="aDate" type="date" />
+                  </div>
+                  <div class="field">
+                    <label>Session Title</label
+                    ><input id="aSession" placeholder="e.g., Day 12 – Arrays" />
+                  </div>
+                </div>
+
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Month Filter</label
+                    ><select id="aMonth"></select>
+                  </div>
+                  <div class="field">
+                    <label>Total Sessions (Selected Month)</label
+                    ><input id="aTotalSessions" readonly placeholder="0" />
+                  </div>
+                  <div class="field">
+                    <label>Notes</label
+                    ><input id="aNote" placeholder="Optional" />
+                  </div>
+                </div>
+
+                <div class="hint">
+                  Month selection shows total sessions recorded for that month &
+                  course.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Quick Summary</h4>
+                <span>Present / Absent</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="stat">
+                    <small>Present</small>
+                    <h3 id="aPresent">0</h3>
+                    <p>Marked present</p>
+                    <div class="accentLine"></div>
+                  </div>
+                  <div class="stat">
+                    <small>Absent</small>
+                    <h3 id="aAbsent">0</h3>
+                    <p>Marked absent</p>
+                    <div class="accentLine"></div>
+                  </div>
+                </div>
+                <div class="hint">
+                  Save → attendance % recalculates automatically.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px">
+            <div class="cardHead">
+              <h4>Mark Attendance</h4>
+              <span>Checkbox based</span>
+            </div>
+            <div class="cardBody">
+              <div class="tableWrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Present?</th>
+                      <th>Roll</th>
+                      <th>Student</th>
+                      <th>Course</th>
+                      <th>Attendance %</th>
+                    </tr>
+                  </thead>
+                  <tbody id="attendanceTbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EXAMS -->
+        <section class="section" id="sec-exams">
+          <div class="heroRow">
+            <div>
+              <h3>Exams Manager</h3>
+              <p>
+                Create course exams with eligibility rule. Save results and
+                export PDF/Excel.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="createExamBtn">
+                + Create Exam
+              </button>
+              <button class="btn btnGhost" id="exportExamPDF">
+                Export Results PDF
+              </button>
+              <button class="btn btnGhost" id="exportExamExcel">
+                Export Results Excel
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Create Exam</h4>
+                <span>Course-wise</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Exam Name</label
+                    ><input id="exName" placeholder="e.g., Mid Term" />
+                  </div>
+                  <div class="field">
+                    <label>Course</label
+                    ><select id="exCourse"></select>
+                  </div>
+                  <div class="field">
+                    <label>Date</label><input id="exDate" type="date" />
+                  </div>
+                </div>
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Max Marks</label
+                    ><input id="exMax" type="number" value="100" />
+                  </div>
+                  <div class="field">
+                    <label>Passing Marks</label
+                    ><input id="exPass" type="number" value="40" />
+                  </div>
+                  <div class="field">
+                    <label>Min Attendance Rule (%)</label
+                    ><input id="exMinAtt" type="number" min="0" max="100" />
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btnPrimary" id="saveExamBtn">
+                    Save Exam
+                  </button>
+                  <button class="btn btnGhost" id="clearExamForm">Clear</button>
+                </div>
+                <div class="hint">Min attendance defaults from HR Rule.</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Exams List</h4>
+                <span>Select to manage results</span>
+              </div>
+              <div class="cardBody">
+                <div class="tableWrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Exam</th>
+                        <th>Course</th>
+                        <th>Date</th>
+                        <th>Rule</th>
+                        <th>Pass</th>
+                      </tr>
+                    </thead>
+                    <tbody id="examsTbody"></tbody>
+                  </table>
+                </div>
+                <div class="hint">
+                  Click an exam → eligible list loads below.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px">
+            <div class="cardHead">
+              <h4>Eligible Students & Results</h4>
+              <span>Rule applied</span>
+            </div>
+            <div class="cardBody">
+              <div class="actions" style="margin-top: 0">
+                <button class="btn btnGhost" id="loadEligibleBtn">
+                  Load Eligible
+                </button>
+                <button class="btn btnPrimary" id="saveResultsBtn">
+                  Save Results
+                </button>
+              </div>
+              <div class="tableWrap" style="margin-top: 12px">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Eligible</th>
+                      <th>Roll</th>
+                      <th>Student</th>
+                      <th>Attendance %</th>
+                      <th>Marks</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="resultsTbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAYMENTS -->
+        <section class="section" id="sec-payments">
+          <div class="heroRow">
+            <div>
+              <h3>Payment & Subscription Management</h3>
+              <p>
+                Track invoices, payment status and subscription types. Charts
+                and reports update automatically.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="addPayTop">
+                + Add Payment
+              </button>
+              <button class="btn btnGhost" id="clearPaySel">
+                Clear Selection
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Payment Form</h4>
+                <span>Create / update</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Student</label
+                    ><select id="pStudent"></select>
+                  </div>
+                  <div class="field">
+                    <label>Course</label
+                    ><select id="pCourse"></select>
+                  </div>
+                  <div class="field">
+                    <label>Amount (₹)</label
+                    ><input
+                      id="pAmount"
+                      type="number"
+                      placeholder="e.g., 7999"
+                    />
+                  </div>
+                </div>
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Type</label
+                    ><select id="pType">
+                      <option>One-time</option>
+                      <option>Subscription</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Mode</label
+                    ><select id="pMode">
+                      <option>UPI</option>
+                      <option>Card</option>
+                      <option>Cash</option>
+                      <option>Bank Transfer</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Status</label
+                    ><select id="pStatus">
+                      <option>Paid</option>
+                      <option>Pending</option>
+                      <option>Failed</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row2" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Date</label><input id="pDate" type="date" />
+                  </div>
+                  <div class="field">
+                    <label>Reference ID</label
+                    ><input id="pRef" placeholder="Auto if blank" />
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btnPrimary" id="addPayBtn">+ Add</button>
+                  <button class="btn btnGhost" id="updatePayBtn" disabled>
+                    Update
+                  </button>
+                  <button class="btn btnDanger" id="deletePayBtn" disabled>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Payments List</h4>
+                <span>Click row to select</span>
+              </div>
+              <div class="cardBody">
+                <div class="tableWrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Student</th>
+                        <th>Course</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>Ref</th>
+                      </tr>
+                    </thead>
+                    <tbody id="payTbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- REPORTS -->
+        <section class="section" id="sec-reports">
+          <div class="heroRow">
+            <div>
+              <h3>Reports & Analytics</h3>
+              <p>
+                Filter revenue & payments, then export as PDF/Excel for finance
+                reporting.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="applyReport">Apply</button>
+              <button class="btn btnGhost" id="exportPDF">Export PDF</button>
+              <button class="btn btnGhost" id="exportExcel">
+                Export Excel
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Filters</h4>
+                <span>Status + date range</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Status</label>
+                    <select id="rStatus">
+                      <option value="ALL">All</option>
+                      <option>Paid</option>
+                      <option>Pending</option>
+                      <option>Failed</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>From</label><input id="rFrom" type="date" />
+                  </div>
+                  <div class="field">
+                    <label>To</label><input id="rTo" type="date" />
+                  </div>
+                </div>
+                <div class="hint">
+                  Use this for monthly revenue & pending dues.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Summary</h4>
+                <span>Totals</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="stat">
+                    <small>Total Paid</small>
+                    <h3 id="sumPaid">₹ 0</h3>
+                    <p>Collected</p>
+                    <div class="accentLine"></div>
+                  </div>
+                  <div class="stat">
+                    <small>Total Pending</small>
+                    <h3 id="sumPending">₹ 0</h3>
+                    <p>Outstanding</p>
+                    <div class="accentLine"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px">
+            <div class="cardHead">
+              <h4>Report Table</h4>
+              <span>Filtered results</span>
+            </div>
+            <div class="cardBody">
+              <div class="tableWrap">
+                <table id="reportTable">
+                  <thead>
+                    <tr>
+                      <th>Student</th>
+                      <th>Course</th>
+                      <th>Amount</th>
+                      <th>Type</th>
+                      <th>Mode</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                      <th>Ref</th>
+                    </tr>
+                  </thead>
+                  <tbody id="reportTbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- USERS -->
+        <section class="section" id="sec-users">
+          <div class="heroRow">
+            <div>
+              <h3>User & Role Management</h3>
+              <p>
+                Manage Admin/HR/Trainer/Staff accounts with simple RBAC
+                (permissions).
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="addUserBtnTop">
+                + Add User
+              </button>
+              <button class="btn btnGhost" id="clearUserSel">
+                Clear Selection
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>User Form</h4>
+                <span>Role + status</span>
+              </div>
+              <div class="cardBody">
+                <div class="row3">
+                  <div class="field">
+                    <label>Full Name</label><input id="uName" />
+                  </div>
+                  <div class="field">
+                    <label>Email</label><input id="uEmail" />
+                  </div>
+                  <div class="field">
+                    <label>Phone</label><input id="uPhone" />
+                  </div>
+                </div>
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Role</label
+                    ><select id="uRole">
+                      <option>Admin</option>
+                      <option>HR</option>
+                      <option>Trainer</option>
+                      <option>Staff</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Status</label
+                    ><select id="uStatus">
+                      <option>Active</option>
+                      <option>Disabled</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Permission</label
+                    ><select id="uPerm">
+                      <option value="Full">Full Access</option>
+                      <option value="Limited">Limited</option>
+                      <option value="ReadOnly">Read Only</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btnPrimary" id="addUserFormBtn">
+                    Save
+                  </button>
+                  <button class="btn btnGhost" id="updateUserBtn" disabled>
+                    Update
+                  </button>
+                  <button class="btn btnDanger" id="deleteUserBtn" disabled>
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Users List</h4>
+                <span>Click row to select</span>
+              </div>
+              <div class="cardBody">
+                <div class="tableWrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Permission</th>
+                        <th>Phone</th>
+                      </tr>
+                    </thead>
+                    <tbody id="usersTbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATES -->
+        <section class="section" id="sec-cert">
+          <div class="heroRow">
+            <div>
+              <h3>Certification Template Management</h3>
+              <p>
+                Create certificate templates and preview instantly. Use
+                placeholders like {STUDENT_NAME} and {COURSE_NAME}.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="addTplBtn">
+                + Add Template
+              </button>
+              <button class="btn btnGhost" id="previewTplBtn">Preview</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Template Form</h4>
+                <span>Placeholders supported</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Template Name</label><input id="tName" />
+                  </div>
+                  <div class="field">
+                    <label>Default Template?</label
+                    ><select id="tDefault">
+                      <option>No</option>
+                      <option>Yes</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row3" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Primary Color</label
+                    ><input id="tColor" value="#C9A24D" />
+                  </div>
+                  <div class="field">
+                    <label>Signatory</label
+                    ><input
+                      id="tSign"
+                      placeholder="e.g., Director, SkillEdge"
+                    />
+                  </div>
+                  <div class="field">
+                    <label>Logo Text</label
+                    ><input id="tLogoText" value="SkillEdge" />
+                  </div>
+                </div>
+                <div class="field" style="margin-top: 12px">
+                  <label>Body Text</label>
+                  <textarea
+                    id="tBody"
+                    placeholder="Example: This is to certify that {STUDENT_NAME} has successfully completed {COURSE_NAME}..."
+                  ></textarea>
+                </div>
+                <div class="actions">
+                  <button class="btn btnGhost" id="updateTplBtn" disabled>
+                    Update
+                  </button>
+                  <button class="btn btnDanger" id="deleteTplBtn" disabled>
+                    Delete
+                  </button>
+                </div>
+                <div class="hint">
+                  Placeholders: {STUDENT_NAME}, {COURSE_NAME}, {DATE}, {CERT_ID}
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Templates List</h4>
+                <span>Select to edit</span>
+              </div>
+              <div class="cardBody">
+                <div class="tableWrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Template</th>
+                        <th>Default</th>
+                        <th>Color</th>
+                        <th>Signatory</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tplTbody"></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HR RULE -->
+        <section class="section" id="sec-rules">
+          <div class="heroRow">
+            <div>
+              <h3>Admin / HR Rule</h3>
+              <p>
+                Set the minimum attendance percentage required for exam
+                eligibility.
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="saveRule">Save Rule</button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>Attendance Eligibility Rule</h4>
+                <span>Exam policy</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Minimum Attendance (%)</label
+                    ><input id="minAtt" type="number" min="0" max="100" />
+                  </div>
+                  <div class="field">
+                    <label>Scope</label
+                    ><select id="ruleScope">
+                      <option>All Courses</option>
+                      <option>Selected Courses</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field" style="margin-top: 12px">
+                  <label>Policy Note</label>
+                  <textarea id="ruleNote"></textarea>
+                </div>
+                <div class="hint">
+                  This rule will auto-apply when loading eligible students for
+                  any exam.
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Quick Checker</h4>
+                <span>Verify policy</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Attendance (%)</label
+                    ><input id="demoAtt" type="number" min="0" max="100" />
+                  </div>
+                  <div class="field">
+                    <label>Result</label><input id="demoRes" readonly />
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="btn btnGhost" id="runDemoRule">
+                    Run Check
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SYSTEM -->
+        <section class="section" id="sec-system">
+          <div class="heroRow">
+            <div>
+              <h3>System Configuration & Security</h3>
+              <p>
+                Manage institute settings, timezone, and security policies (2FA,
+                password rules, session timeouts).
+              </p>
+            </div>
+            <div class="heroActions">
+              <button class="btn btnPrimary" id="saveSystem">
+                Save Settings
+              </button>
+              <button class="btn btnGhost" id="saveSecurity">
+                Save Security
+              </button>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="card">
+              <div class="cardHead">
+                <h4>System Settings</h4>
+                <span>Institute info</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>Institute Name</label><input id="sysInstitute" />
+                  </div>
+                  <div class="field">
+                    <label>Support Email</label><input id="sysEmail" />
+                  </div>
+                </div>
+                <div class="row2" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Currency</label
+                    ><select id="sysCurrency">
+                      <option value="INR">INR (₹)</option>
+                      <option value="USD">USD ($)</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Timezone</label
+                    ><select id="sysTZ">
+                      <option value="Asia/Kolkata">Asia/Kolkata</option>
+                      <option value="UTC">UTC</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="cardHead">
+                <h4>Security</h4>
+                <span>Policy controls</span>
+              </div>
+              <div class="cardBody">
+                <div class="row2">
+                  <div class="field">
+                    <label>2FA</label
+                    ><select id="sec2fa">
+                      <option>Off</option>
+                      <option>On</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label>Password Policy</label
+                    ><select id="secPolicy">
+                      <option>Standard</option>
+                      <option>Strong</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row2" style="margin-top: 12px">
+                  <div class="field">
+                    <label>Session Timeout (minutes)</label
+                    ><input id="secTimeout" type="number" value="30" />
+                  </div>
+                  <div class="field">
+                    <label>Login Attempts Limit</label
+                    ><input id="secAttempts" type="number" value="5" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- MODAL + TOAST -->
+    <div class="modalBack" id="modalBack">
+      <div class="modal">
+        <div class="modalHead">
+          <h4 id="modalTitle">Preview</h4>
+          <button class="closeX" id="closeModal">✕</button>
+        </div>
+        <div class="cardBody" id="modalBody"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast">Saved</div>
+
+    <script src="./javascript/Admin_panal.js"></script>
+  </body>
+</html>

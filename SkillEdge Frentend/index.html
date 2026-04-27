@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillEdge – Home</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./CSS/Index.css" />
+
+    
+  </head>
+
+  <body>
+    <!-- ✅ PAGE HEADER (hero ke bahar) -->
+    <header class="siteHeader">
+      <div class="wrap">
+        <div class="nav">
+          <div class="logo">
+            <img src="./assets/image/logo.png" alt="logo" />Skill<span>Edge</span>
+          </div>
+
+          <div class="navLinks">
+            <a href="index.html">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+          </div>
+
+          <a href="login.html"
+            ><button class="navBtn" type="button">Login</button></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="content">
+          <div class="left">
+            <h1><span>Studying </span>Online <br />is now much <br />easier</h1>
+            <p>
+              SkillEdge is a premium IT training platform designed to deliver
+              industry-ready skills with a clean, royal and professional
+              experience.
+            </p>
+
+            <div class="ctaRow">
+              <a href="signup.html"
+                ><button class="cta" type="button">Join SkillEdge</button></a
+              >
+              <div class="play" title="Play">▶</div>
+              <h3 class="watchText">Watch How It Works</h3>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="model" id="heroModel" aria-label="Hero slideshow">
+              <img class="slideImg show" id="imgA" alt="SkillEdge Slide A" />
+              <img class="slideImg" id="imgB" alt="SkillEdge Slide B" />
+            </div>
+
+            <button class="badge b1" type="button" data-type="students">
+              <b>250K+</b><br />Assisted Students
+            </button>
+
+            <button class="badge b2" type="button" data-type="live">
+              <b>Live Class</b><br />Today at 6:00 PM
+            </button>
+
+            <button class="badge b3" type="button" data-type="progress">
+              <b>Congratulations</b><br />Progress Improved
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal" id="modal">
+      <div
+        class="modalCard"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <div class="modalHead">
+          <div class="modalTitle" id="modalTitle">Title</div>
+          <button
+            class="modalClose"
+            id="modalClose"
+            type="button"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modalBody" id="modalBody">Content here...</div>
+        <div class="modalActions">
+          <button class="modalBtn" id="modalSecondary" type="button">
+            Close
+          </button>
+          <button
+            class="modalBtn modalBtnPrimary"
+            id="modalPrimary"
+            type="button"
+          >
+            Explore
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="successSec" id="success">
+      <div class="wrap">
+        <div class="successCard">
+          <h2><span style="color: #c9a24d">Our </span>Success</h2>
+          <p class="successSub">
+            SkillEdge delivers industry-ready training with live classes,
+            mentorship, and project-based learning—crafted with a royal, premium
+            experience.
+          </p>
+
+          <div class="statsRow">
+            <div class="stat">
+              <div class="num">
+                <span class="count" data-target="15000">0</span
+                ><span class="suffix">+</span>
+              </div>
+              <div class="lbl">Students</div>
+            </div>
+
+            <div class="stat">
+              <div class="num">
+                <span class="count" data-target="75">0</span
+                ><span class="suffix">%</span>
+              </div>
+              <div class="lbl">Total success</div>
+            </div>
+
+            <div class="stat">
+              <div class="num">
+                <span class="count" data-target="35">0</span>
+              </div>
+              <div class="lbl">Main questions</div>
+            </div>
+
+            <div class="stat">
+              <div class="num">
+                <span class="count" data-target="26">0</span>
+              </div>
+              <div class="lbl">Chief experts</div>
+            </div>
+
+            <div class="stat">
+              <div class="num">
+                <span class="count" data-target="16">0</span>
+              </div>
+              <div class="lbl">Years of experience</div>
+            </div>
+          </div>
+
+          <section>
+            <div
+              class="logoStrip proStrip"
+              aria-label="Trusted by top companies"
+            >
+              <div class="stripHead">
+                <div class="stripTitle">Trusted by</div>
+                <div class="stripSub">Top companies & teams worldwide</div>
+              </div>
+
+              <div class="stripFade left" aria-hidden="true"></div>
+              <div class="stripFade right" aria-hidden="true"></div>
+
+              <div
+                class="marquee"
+                id="marquee"
+                role="region"
+                aria-label="Company logos marquee"
+              >
+                <div class="track" id="track">
+                  <!-- ===== Set A ===== -->
+                  <div
+                    class="logoPill"
+                    data-name="Google"
+                    data-domain="google.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Google logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Google</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Microsoft"
+                    data-domain="microsoft.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Microsoft logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Microsoft</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Amazon"
+                    data-domain="amazon.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Amazon logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Amazon</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Apple"
+                    data-domain="apple.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Apple logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Apple</span>
+                  </div>
+
+                  <div class="logoPill" data-name="IBM" data-domain="ibm.com">
+                    <img
+                      class="logoImg"
+                      alt="IBM logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">IBM</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Accenture"
+                    data-domain="accenture.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Accenture logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Accenture</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Deloitte"
+                    data-domain="deloitte.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Deloitte logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Deloitte</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Infosys"
+                    data-domain="infosys.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Infosys logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Infosys</span>
+                  </div>
+
+                  <div class="logoPill" data-name="TCS" data-domain="tcs.com">
+                    <img
+                      class="logoImg"
+                      alt="TCS logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">TCS</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Wipro"
+                    data-domain="wipro.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Wipro logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Wipro</span>
+                  </div>
+
+                  <!-- ===== Set B (duplicate for seamless loop) ===== -->
+                  <div
+                    class="logoPill"
+                    data-name="Google"
+                    data-domain="google.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Google logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Google</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Microsoft"
+                    data-domain="microsoft.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Microsoft logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Microsoft</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Amazon"
+                    data-domain="amazon.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Amazon logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Amazon</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Apple"
+                    data-domain="apple.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Apple logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Apple</span>
+                  </div>
+
+                  <div class="logoPill" data-name="IBM" data-domain="ibm.com">
+                    <img
+                      class="logoImg"
+                      alt="IBM logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">IBM</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Accenture"
+                    data-domain="accenture.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Accenture logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Accenture</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Deloitte"
+                    data-domain="deloitte.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Deloitte logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Deloitte</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Infosys"
+                    data-domain="infosys.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Infosys logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Infosys</span>
+                  </div>
+
+                  <div class="logoPill" data-name="TCS" data-domain="tcs.com">
+                    <img
+                      class="logoImg"
+                      alt="TCS logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">TCS</span>
+                  </div>
+
+                  <div
+                    class="logoPill"
+                    data-name="Wipro"
+                    data-domain="wipro.com"
+                  >
+                    <img
+                      class="logoImg"
+                      alt="Wipro logo"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="logoText">Wipro</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="featuresPro" id="features">
+      <div class="wrap">
+        <div class="featuresProCard">
+          <div class="featuresProHead">
+            <h2 class="featuresProTitle">
+              All-In-One <span>Cloud Training</span> & Management Software
+            </h2>
+            <p class="featuresProSub">
+              Everything you need to manage training programs, employees,
+              learners, scheduling, attendance and growth — all in one secure
+              platform. (Same royal theme like hero )
+            </p>
+          </div>
+
+          <div class="fpGrid">
+            <!-- LEFT: Problem -> Solution -->
+            <div class="fpStory">
+              <div class="fpTabs">
+                <span class="fpPill">Problem →</span>
+                <span class="fpPill muted">SkillEdge Solution </span>
+              </div>
+
+              <div class="fpBlocks">
+                <!-- Card 1 -->
+                <div class="fpBlock">
+                  <div class="fpBlockTop">
+                    <div class="fpIcon">📄</div>
+                    <div class="fpH">Training Programs, Fees & Docs</div>
+                  </div>
+                  <div class="fpText">
+                    Data scattered? invoices + records alag-alag? ab sab ek hi
+                    jagah.
+                  </div>
+                  <div class="fpList">
+                    <span><i class="fpTick">✓</i> Fees & invoices</span>
+                    <span><i class="fpTick">✓</i> Centralized documents</span>
+                    <span><i class="fpTick">✓</i> Secure access</span>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="fpBlock">
+                  <div class="fpBlockTop">
+                    <div class="fpIcon">📅</div>
+                    <div class="fpH">Smart Scheduling & Attendance</div>
+                  </div>
+                  <div class="fpText">
+                    Manual attendance + schedule confusion? ab auto, clean &
+                    fast.
+                  </div>
+                  <div class="fpList">
+                    <span><i class="fpTick">✓</i> Batch scheduling</span>
+                    <span><i class="fpTick">✓</i> Auto attendance</span>
+                    <span><i class="fpTick">✓</i> Reminders</span>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="fpBlock">
+                  <div class="fpBlockTop">
+                    <div class="fpIcon">📈</div>
+                    <div class="fpH">Performance Tracking</div>
+                  </div>
+                  <div class="fpText">
+                    Progress real-time insights + reports.
+                  </div>
+                  <div class="fpList">
+                    <span><i class="fpTick">✓</i> Learner progress</span>
+                    <span><i class="fpTick">✓</i> Employee performance</span>
+                    <span><i class="fpTick">✓</i> Analytics</span>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="fpBlock">
+                  <div class="fpBlockTop">
+                    <div class="fpIcon">🔒</div>
+                    <div class="fpH">Secure Cloud System</div>
+                  </div>
+                  <div class="fpText">
+                    Royal look + safe system. Access control + organized
+                    workflow.
+                  </div>
+                  <div class="fpList">
+                    <span><i class="fpTick">✓</i> Role-based access</span>
+                    <span><i class="fpTick">✓</i> Cloud storage</span>
+                    <span><i class="fpTick">✓</i> Backup ready</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Dashboard Preview -->
+            <div class="fpPreview">
+              <div class="fpPreviewHead">
+                <div>
+                  <div class="fpPreviewTitle">Live Dashboard Preview</div>
+                </div>
+                <button class="fpMiniBtn" type="button">View Demo</button>
+              </div>
+
+              <div class="fpCanvas">
+                <div class="fpWindow">
+                  <div class="fpTopbar">
+                    <div class="fpDots"><i></i><i></i><i></i></div>
+                    <div class="fpSearch">
+                      Search: batches, students, reports…
+                    </div>
+                  </div>
+
+                  <div class="fpBody">
+                    <div class="fpSide">
+                      <div class="fpChip">
+                        Today’s Class <small>6:00 PM</small>
+                      </div>
+                      <div class="fpChip">Attendance <small>Auto</small></div>
+                      <div class="fpChip">
+                        Certificates <small>Ready</small>
+                      </div>
+                      <div class="fpChip">Invoices <small>Paid</small></div>
+                    </div>
+
+                    <div class="fpMain">
+                      <div class="fpKpiRow">
+                        <div class="fpKpi">
+                          <b>1,248</b><span>Active Learners</span>
+                        </div>
+                        <div class="fpKpi">
+                          <b>96%</b><span>Attendance Rate</span>
+                        </div>
+                        <div class="fpKpi">
+                          <b>+28%</b><span>Progress Growth</span>
+                        </div>
+                      </div>
+
+                      <div class="fpChart">
+                        <div class="fpBars">
+                          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="fpFoot">
+                    One dashboard to manage schedules, attendance, learners,
+                    employees & performance — smoothly.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="whatSec" id="what">
+      <div class="wrap">
+        <div class="whatCard">
+          <div class="whatHead">
+            <h2 class="whatTitle">What is <span>SkillEdge</span>?</h2>
+            <p class="whatSub">
+              SkillEdge is an IT Training Management System that helps
+              institutes, trainers and students manage classes, assignments,
+              exams, attendance and progress — all in one secure platform.
+            </p>
+          </div>
+
+          <div class="whatGrid">
+            <!-- TRAINERS -->
+            <article
+              class="roleCard"
+              data-role="trainers"
+              tabindex="0"
+              aria-label="For Trainers"
+            >
+              <div
+                class="roleMedia"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80&quot;);
+                "
+              ></div>
+              <div class="roleShade"></div>
+              <div class="roleGlow"></div>
+
+              <div class="roleContent">
+                <div class="roleBadge">For Trainers</div>
+                <div class="roleH">Run training like a pro</div>
+                <div class="roleP">
+                  Batches, schedules, attendance, assignments, fees &
+                  certificates .
+                </div>
+
+                <div class="roleActions">
+                  <button
+                    class="roleBtn roleBtnPrimary"
+                    type="button"
+                    data-action="start-training"
+                  >
+                    Start Training
+                  </button>
+                  <button
+                    class="roleBtn"
+                    type="button"
+                    data-action="see-features"
+                  >
+                    See Features
+                  </button>
+                </div>
+
+                <div class="roleMini">
+                  <div class="roleMiniBox">
+                    <b>Auto</b><span>Attendance</span>
+                  </div>
+                  <div class="roleMiniBox">
+                    <b>Smart</b><span>Scheduling</span>
+                  </div>
+                  <div class="roleMiniBox"><b>Fast</b><span>Reports</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- STUDENTS -->
+            <article
+              class="roleCard"
+              data-role="students"
+              tabindex="0"
+              aria-label="For Students"
+            >
+              <div
+                class="roleMedia"
+                style="
+                  background-image: url(&quot;https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80&quot;);
+                "
+              ></div>
+              <div class="roleShade"></div>
+              <div class="roleGlow"></div>
+
+              <div class="roleContent">
+                <div class="roleBadge">For Students</div>
+                <div class="roleH">Learn, track & grow</div>
+                <div class="roleP">
+                  Join with code, see your progress, submit assignments, attempt
+                  tests and get certificates.
+                </div>
+
+                <div class="roleActions">
+                  <button
+                    class="roleBtn roleBtnPrimary"
+                    type="button"
+                    data-action="join-code"
+                  >
+                    Join with Code
+                  </button>
+                  <button
+                    class="roleBtn"
+                    type="button"
+                    data-action="how-it-works"
+                  >
+                    How it works
+                  </button>
+                </div>
+
+                <div class="roleMini">
+                  <div class="roleMiniBox"><b>Live</b><span>Classes</span></div>
+                  <div class="roleMiniBox">
+                    <b>Track</b><span>Progress</span>
+                  </div>
+                  <div class="roleMiniBox">
+                    <b>Earn</b><span>Certificates</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="classroomSec" id="classroom">
+      <div class="wrap">
+        <div class="classroomCard reveal">
+          <div class="classroomGrid">
+            <!-- LEFT CONTENT -->
+            <div class="classroomLeft">
+              <div class="classroomKicker">⚡ Smart Learning Experience</div>
+
+              <h2 class="classroomTitle">
+                Everything you can do in a <span>physical classroom</span>, you
+                can do with SkillEdge
+              </h2>
+
+              <p class="classroomText">
+                SkillEdge helps institutes, trainers, and students manage
+                scheduling, attendance, payments, assignments, exams, progress
+                and virtual classes — all in one secure cloud-based system.
+              </p>
+
+              <div class="classroomActions">
+                <a href="#features"
+                  ><button class="cBtn cBtnPrimary" type="button">
+                    Explore Features
+                  </button></a
+                >
+                <a href="signup.html"
+                  ><button class="cBtn" type="button">Get Started</button></a
+                >
+              </div>
+            </div>
+
+            <!-- RIGHT MEDIA -->
+            <div class="classroomMedia">
+              <span class="cornerAccent a" aria-hidden="true"></span>
+              <span class="cornerAccent b" aria-hidden="true"></span>
+
+              <div class="mediaFrame">
+                <img
+                  src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1400&q=80"
+                  alt="Classroom demo"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="playOverlay">
+                  <button
+                    class="playBtn"
+                    id="playVideoBtn"
+                    type="button"
+                    aria-label="Play demo video"
+                  >
+                    <span></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ VIDEO MODAL (separate, safe) -->
+    <div class="modal" id="videoModal" aria-hidden="true">
+      <div
+        class="modalCard"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="videoTitle"
+      >
+        <div class="modalHead">
+          <div class="modalTitle" id="videoTitle">SkillEdge Demo</div>
+          <button
+            class="modalClose"
+            id="videoClose"
+            type="button"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="modalBody" style="padding: 0 18px 18px">
+          <div
+            style="
+              border-radius: 18px;
+              overflow: hidden;
+              border: 1px solid rgba(229, 231, 235, 0.9);
+              background: #fff;
+            "
+          >
+            <iframe
+              id="demoFrame"
+              width="100%"
+              height="315"
+              src=""
+              title="SkillEdge Demo Video"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              style="display: block"
+            ></iframe>
+          </div>
+
+          <div style="margin-top: 12px; color: var(--muted); line-height: 1.7">
+            Tip: Is video me tum platform ka dashboard, attendance, fees, exams
+            aur reports ka quick demo dikha sakte ho.
+          </div>
+        </div>
+
+        <div class="modalActions">
+          <button class="modalBtn" id="videoSecondary" type="button">
+            Close
+          </button>
+          <a href="signup.html"
+            ><button class="modalBtn modalBtnPrimary" type="button">
+              Start Free
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section class="uiFeaturesSec" id="uiFeatures">
+      <div class="wrap">
+        <div class="uiFeaturesCard uiReveal">
+          <div class="uiHead">
+            <h2 class="uiTitle">Our <span>Features</span></h2>
+            <p class="uiSub">
+              A premium classroom interface designed for trainers and learners —
+              simple, powerful and clean (SkillEdge theme).
+            </p>
+          </div>
+
+          <div class="uiGrid">
+            <!-- ✅ LEFT: Call Card -->
+            <div class="callCardWrap">
+              <div class="callCardCream" data-callcard>
+                <div class="grid">
+                  <div
+                    class="tileBig"
+                    data-img="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1400&q=80"
+                  >
+                    <div class="img"></div>
+
+                    <div class="nameTag">
+                      <div class="avatarMini">UI</div>
+                      <div>
+                        <b>Classroom</b><br />
+                        <small style="color: var(--muted); font-weight: 800"
+                          >Trainer Mode</small
+                        >
+                      </div>
+                    </div>
+
+                    <div class="chipRow">
+                      <span class="chip gold">PODIUM</span>
+                      <span class="chip">TOOLS</span>
+                      <span class="chip">GRID</span>
+                    </div>
+                  </div>
+
+                  <div class="stack">
+                    <div
+                      class="tileSmall"
+                      data-img="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80"
+                    >
+                      <div class="img"></div>
+                      <div class="label">Mentor</div>
+                    </div>
+
+                    <div
+                      class="tileSmall"
+                      data-img="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80"
+                    >
+                      <div class="img"></div>
+                      <div class="label">Student</div>
+                    </div>
+                  </div>
+
+                  <div class="join">▶</div>
+                </div>
+
+                <div class="actions">
+                  <button class="btn present" type="button">Tools</button>
+                  <button class="btn call" type="button">Grid</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="uiTextOnly">
+              <h2 class="uiTitle">
+                A <span>user interface</span> designed for the classroom
+              </h2>
+              <br />
+
+              <div class="uiParagraph">
+                <p>
+                  Trainers don't get lost in grid view and have a dedicated
+                  teaching space.
+                </p>
+                <br />
+                <p>Mentors and presenters can be moved to the front easily.</p>
+                <br />
+                <p>
+                  Trainers can monitor students and class data in real time.
+                </p>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="toolsSec" id="tools">
+      <div class="wrap">
+        <div class="toolsCard toolsReveal">
+          <div class="toolsGrid">
+            <!-- LEFT -->
+            <div class="toolsLeft">
+              <h2 class="toolsTitle">
+                <span class="accent">Tools</span> For Teachers<br />
+                And Learners
+              </h2>
+
+              <p class="toolsText">
+                SkillEdge is equipped with a dynamic set of classroom tools that
+                enhance both teaching and learning. These tools are designed to
+                be intuitive, fast and effective during live sessions.
+              </p>
+              <p class="toolsText">
+                Teachers can hand out assignments, conduct quizzes, monitor
+                participation and manage classroom activities without switching
+                platforms.
+              </p>
+              <p class="toolsText">
+                Learners stay engaged through real-time interactions, instant
+                submissions and continuous feedback that helps them improve with
+                confidence.
+              </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="toolsVisual">
+              <div class="toolsDots" aria-hidden="true"></div>
+              <div class="toolsCircle" aria-hidden="true"></div>
+
+              <!-- Floating tiles -->
+              <div class="toolsTile t1" aria-hidden="true">
+                <!-- simple icon -->
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="4"
+                    y="4"
+                    width="7"
+                    height="7"
+                    rx="2"
+                    fill="#3b82f6"
+                  ></rect>
+                  <rect
+                    x="13"
+                    y="4"
+                    width="7"
+                    height="7"
+                    rx="2"
+                    fill="#f59e0b"
+                  ></rect>
+                  <rect
+                    x="4"
+                    y="13"
+                    width="7"
+                    height="7"
+                    rx="2"
+                    fill="#22c55e"
+                  ></rect>
+                  <rect
+                    x="13"
+                    y="13"
+                    width="7"
+                    height="7"
+                    rx="2"
+                    fill="#0B2545"
+                  ></rect>
+                </svg>
+              </div>
+
+              <div class="toolsTile t2" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 7h16M4 12h16M4 17h10"
+                    stroke="#0B2545"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="18.5" cy="17" r="2.5" fill="#C9A24D" />
+                </svg>
+              </div>
+
+              <div class="toolsTile t3" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 17l3-3 3 3 5-6"
+                    stroke="#0B2545"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 20h14"
+                    stroke="#C9A24D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+
+              <!-- color dots -->
+              <span class="toolsDot d1" aria-hidden="true"></span>
+              <span class="toolsDot d2" aria-hidden="true"></span>
+              <span class="toolsDot d3" aria-hidden="true"></span>
+
+              <!-- Girl Image -->
+              <img
+                class="toolsGirl"
+                src="./assets/image/girl.png"
+                alt="Student holding notebooks"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- weap -->
+
+    <div class="wrap">
+      <section class="assessSec">
+        <!-- LEFT: CARD -->
+        <div class="cardWrap" id="leftCard">
+          <div class="quizCard">
+            <span class="bgCircle blue" aria-hidden="true"></span>
+            <span class="bgCircle gold" aria-hidden="true"></span>
+
+            <span class="dotTop" aria-hidden="true"></span>
+            <span class="dotBottom" aria-hidden="true"></span>
+            <span class="pinkDot" aria-hidden="true"></span>
+
+            <!-- Wrong / Right floating -->
+            <div class="iconDock" aria-hidden="true">
+              <div class="iconBubble" title="Wrong">
+                <div class="xBtn">✕</div>
+              </div>
+              <div class="iconBubble" title="Right">
+                <div class="checkBtn">✓</div>
+              </div>
+            </div>
+
+            <div class="pill">Question 1</div>
+
+            <div class="qTitle">
+              True or false? This play<br />
+              takes place in Italy
+            </div>
+
+            <div class="imgWrap">
+              <img
+                src="./assets/image/world-beautiful-cities.jpg"
+                alt="Italy"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="successToast" aria-label="Success message">
+              <div class="planeBox">
+                <div class="plane" aria-hidden="true"></div>
+              </div>
+              <div class="successText">
+                Your answer was<br />
+                sent successfully
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: TEXT (Theme matched) -->
+        <div class="rightText" id="rightText">
+          <h2>
+            Assessments,<br />
+            <span class="gold">Quizzes</span>, Tests
+          </h2>
+          <p>
+            Easily launch live assignments, quizzes, and tests. Student results
+            are automatically entered in the online gradebook.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <section class="wrap">
+      <section class="eduToolsSec">
+        <div class="eduToolsCard">
+          <div class="eduToolsGrid" id="eduToolsReveal">
+            <!-- LEFT TEXT -->
+            <div>
+              <div class="eduTitle">
+                <span style="color: var(--gold)">Class Management</span> Tools
+                for Educators
+              </div>
+              <p>
+                Class provides tools to help run and manage the class such as
+                Class Roster, Attendance, and more. With the Gradebook, teachers
+                can review and grade tests and quizzes in real-time.
+              </p>
+            </div>
+
+            <!-- RIGHT VISUAL -->
+            <div class="eduViz">
+              <div class="gbWrap">
+                <div class="gbPlate" aria-hidden="true"></div>
+
+                <div class="gbCard">
+                  <div class="gbBubble star" aria-hidden="true">
+                    <div class="gbStar"></div>
+                  </div>
+                  <div class="gbTopBar">GradeBook</div>
+                  <div class="gbBubble book" aria-hidden="true">
+                    <div class="gbBook"></div>
+                  </div>
+
+                  <div class="gbInner">
+                    <div class="gbRow r1">
+                      <div class="fill"></div>
+                    </div>
+                    <div class="gbRow r2">
+                      <div class="fill"></div>
+                    </div>
+                    <div class="gbRow r3">
+                      <div class="fill"></div>
+                    </div>
+
+                    <div class="gbBadge b1">
+                      <img
+                        class="gbAvatar"
+                        src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=220&q=80"
+                        alt="Student"
+                      />
+                      <span class="gbScore blue">100</span>
+                    </div>
+
+                    <div class="gbBadge b2">
+                      <img
+                        class="gbAvatar"
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=220&q=80"
+                        alt="Student"
+                      />
+                      <span class="gbScore blue">93</span>
+                    </div>
+
+                    <div class="gbBadge b3">
+                      <span class="gbScore red">75</span>
+                      <img
+                        class="gbAvatar"
+                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=220&q=80"
+                        alt="Student"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button class="wrap_seeMoreBtn">See more features</button>
+    </section>
+
+    <!-- ===== TG Explore Block (Theme Matched) START ===== -->
+    <section class="tgExplore tg-reveal" id="tgExplore">
+      <div class="tgWrap">
+        <!-- SECTION 1 -->
+        <div class="tgSec">
+          <div class="tgPanel">
+            <div class="tgHead">
+              <div class="tgHeadLeft">
+                <div class="tgTitle">
+                  Explore <span class="tgAccent">Courses</span>
+                </div>
+                <div class="tgSubtitle">
+                  Job-ready courses with real projects and expert guidance to
+                  build practical skills.
+                </div>
+              </div>
+              <a class="tgSeeAll" href="#" data-tg-seeall="courses"
+                >SEE ALL →</a
+              >
+            </div>
+
+            <div class="tgRow">
+              <div class="tgPillsWrap">
+                <div class="tgPills" id="tgPillsCourses"></div>
+              </div>
+
+              <div class="tgCard">
+                <div class="tgCardMedia">
+                  <img id="tgImgCourses" alt="course" />
+                </div>
+                <div class="tgCardBody">
+                  <div class="tgCardTitle" id="tgTitleCourses"></div>
+                  <div class="tgCardDesc" id="tgDescCourses"></div>
+                  <div class="tgStars" id="tgStarsCourses"></div>
+                  <div class="tgCardBottom">
+                    <div class="tgPrice" id="tgPriceCourses"></div>
+                    <button class="tgBtn" id="tgBtnCourses">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <div class="tgSec">
+          <div class="tgPanel">
+            <div class="tgHead">
+              <div class="tgHeadLeft">
+                <div class="tgTitle">
+                  Practice <span class="tgAccent">Questions</span> Series
+                </div>
+                <div class="tgSubtitle">
+                  Interview-focused packs to sharpen logic and problem-solving
+                  speed.
+                </div>
+              </div>
+              <a class="tgSeeAll" href="#" data-tg-seeall="practice"
+                >SEE ALL →</a
+              >
+            </div>
+
+            <div class="tgRow">
+              <div class="tgPillsWrap">
+                <div class="tgPills" id="tgPillsPractice"></div>
+              </div>
+
+              <div class="tgCard">
+                <div class="tgCardMedia">
+                  <img id="tgImgPractice" alt="practice" />
+                </div>
+                <div class="tgCardBody">
+                  <div class="tgCardTitle" id="tgTitlePractice"></div>
+                  <div class="tgCardDesc" id="tgDescPractice"></div>
+                  <div class="tgStars" id="tgStarsPractice"></div>
+                  <div class="tgCardBottom">
+                    <div class="tgPrice" id="tgPricePractice"></div>
+                    <button class="tgBtn" id="tgBtnPractice">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <div class="tgSec">
+          <div class="tgPanel">
+            <div class="tgHead">
+              <div class="tgHeadLeft">
+                <div class="tgTitle">
+                  All <span class="tgAccent">Books</span>
+                </div>
+                <div class="tgSubtitle">
+                  Clear, practical books for strong fundamentals and quick
+                  revision.
+                </div>
+              </div>
+              <a class="tgSeeAll" href="#" data-tg-seeall="books">SEE ALL →</a>
+            </div>
+
+            <div class="tgRow">
+              <div class="tgPillsWrap">
+                <div class="tgPills" id="tgPillsBooks"></div>
+              </div>
+
+              <div class="tgCard">
+                <div class="tgCardMedia">
+                  <img id="tgImgBooks" alt="book" />
+                </div>
+                <div class="tgCardBody">
+                  <div class="tgCardTitle" id="tgTitleBooks"></div>
+                  <div class="tgCardDesc" id="tgDescBooks"></div>
+                  <div class="tgStars" id="tgStarsBooks"></div>
+                  <div class="tgCardBottom">
+                    <div class="tgPrice" id="tgPriceBooks"></div>
+                    <button class="tgBtn" id="tgBtnBooks">EXPLORE</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== TG Explore Block END ===== -->
+
+    <section class="tgTesti">
+      <div class="wrap">
+        <div class="panel reveal" id="tgTestiPanel">
+          <div class="grid">
+            <!-- LEFT -->
+            <div class="left">
+              <div class="kicker">TESTIMONIAL</div>
+              <h2>What They <span class="accent">Say?</span></h2>
+
+              <p class="para" id="tgTestiTopLine">
+                We’ve helped learners achieve real results with practical
+                training & guidance.
+              </p>
+
+              <p class="para" id="tgTestiMidLine">
+                Students and professionals improved skills, confidence, and job
+                readiness.
+              </p>
+
+              <div class="ctaRow">
+                <button class="btn" id="tgWriteBtn" type="button">
+                  Write your assessment
+                  <span class="arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M10 17l5-5-5-5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div class="miniNote" id="tgSmallNote">Trusted by 7+ teams</div>
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="right" aria-label="Testimonial slider">
+              <button
+                class="navBtn prev"
+                id="tgPrev"
+                type="button"
+                aria-label="Previous testimonial"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14 17l-5-5 5-5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="photoWrap" id="tgPhotoWrap">
+                <img class="photo" id="tgHeroImg" alt="testimonial person" />
+              </div>
+
+              <button
+                class="navBtn next"
+                id="tgNext"
+                type="button"
+                aria-label="Next testimonial"
+              >
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M10 17l5-5-5-5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="card" id="tgCard">
+                <div class="quote" id="tgQuote"></div>
+
+                <div class="meta">
+                  <div class="who">
+                    <div class="avatar"><img id="tgAvatar" alt="avatar" /></div>
+                    <div>
+                      <div class="name" id="tgName"></div>
+                      <div class="role" id="tgRole"></div>
+                    </div>
+                  </div>
+
+                  <div class="rating">
+                    <div class="stars" id="tgStars"></div>
+                    <div class="logoChip" title="Company">
+                      <img id="tgLogo" alt="company logo" />
+                      <span id="tgCompany"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dots" id="tgDots" aria-label="slider dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tgNews">
+      <div class="wrap">
+        <div class="head reveal">
+          <div class="title">
+            Lastest <span class="accent">News</span> and Resources
+          </div>
+          <div class="sub">
+            See the developments that have occurred in the world — updates,
+            press releases, and resources.
+          </div>
+        </div>
+
+        <div class="grid">
+          <!-- LEFT BIG CARD -->
+          <article class="card reveal tgNewsCard" data-open="1">
+            <div class="media">
+              <img
+                src="https://media.gettyimages.com/id/2004915771/video/people-sitting-in-the-meeting-room-and-having-a-videoconference-call-with-colleagues-over-the.jpg?s=640x640&k=20&c=vwV_uCPI59xdNne0gg_A_ailQPMRjaTwx_SrgjO-cnQ="
+                alt="news"
+              />
+              <div class="tag">NEWS</div>
+            </div>
+            <div class="body">
+              <div class="h3">
+                Class adds $30 million to its balance sheet for a Zoom-friendly
+                edtech solution
+              </div>
+              <div class="p">
+                Class, launched less than a year ago, integrates exclusively
+                with modern video classrooms and learning tools…
+              </div>
+              <a class="link" href="#" data-readmore="1">Read more →</a>
+            </div>
+          </article>
+
+          <!-- RIGHT LIST -->
+          <div class="list">
+            <article class="card mini reveal tgNewsCard" data-open="2">
+              <div class="thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1603357465999-241beecc2629?auto=format&fit=crop&w=900&q=80"
+                  alt="press"
+                />
+                <div class="tag">PRESS RELEASE</div>
+              </div>
+              <div>
+                <div class="h3">
+                  Class Technologies Inc. closes $30M Series A to meet high
+                  demand
+                </div>
+                <div class="p">
+                  Class Technologies Inc., the company that created Class,
+                  expands rapidly…
+                </div>
+              </div>
+            </article>
+
+            <article class="card mini reveal tgNewsCard" data-open="3">
+              <div class="thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=900&q=80"
+                  alt="news2"
+                />
+                <div class="tag">NEWS</div>
+              </div>
+              <div>
+                <div class="h3">
+                  Zoom’s earliest investors are betting millions on a better
+                  Zoom for schools
+                </div>
+                <div class="p">
+                  Zoom was never created to be a consumer product. Nonetheless,
+                  the…
+                </div>
+              </div>
+            </article>
+
+            <article class="card mini reveal tgNewsCard" data-open="4">
+              <div class="thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1611095564985-89765398121e?auto=format&fit=crop&w=900&q=80"
+                  alt="news3"
+                />
+                <div class="tag">NEWS</div>
+              </div>
+              <div>
+                <div class="h3">
+                  Former Blackboard CEO raises $16M to bring LMS features to
+                  Zoom classrooms
+                </div>
+                <div class="p">
+                  This year, investors have reaped big returns from betting on
+                  Zoom…
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="tg-footer">
+      <div class="tg-footer-contact-bar">
+        <div class="contact-item">
+          <i class="fas fa-envelope-open-text"></i>
+          <span>Email: skilledge.official@.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-volume"></i>
+          <span>Support: +91 98765 43210</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-certificate"></i>
+          <span>ISO 9001:2015 Certified Institute</span>
+        </div>
+      </div>
+
+      <div class="tg-newsletter-section">
+        <div class="newsletter-container">
+          <h2>Subscribe to get our Newsletter</h2>
+          <form class="tg-big-sub-form">
+            <div class="input-wrapper">
+              <input type="email" placeholder="Your Email Address" required />
+              <button type="submit">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="tg-footer-main">
+        <div class="tg-footer-col wide-col">
+          <div class="tg-logo">
+            <img src="./assets/image/footrer_logo_img.png" alt="SkillEdge" />
+          </div>
+          <p>
+            SkillEdge is a smart Training Management System (TMS) that
+            simplifies learning, manages courses seamlessly, and helps students
+            grow with industry-ready skills
+          </p>
+        </div>
+
+        <div class="tg-footer-col">
+          <h4>Learning Paths</h4>
+          <br />
+          <ul>
+            <li><a href="#">Frontend Development</a></li>
+            <li><a href="#">Backend Mastery</a></li>
+            <li><a href="#">Mobile App Developer</a></li>
+            <li><a href="#">UI/UX Design</a></li>
+            <li><a href="#">Data Science & AI</a></li>
+          </ul>
+        </div>
+
+        <div class="tg-footer-col">
+          <h4>For Students</h4>
+          <br />
+          <ul>
+            <li><a href="#">Free Demo Classes</a></li>
+            <li><a href="#">Placement Cell</a></li>
+            <li><a href="#">Alumni Success</a></li>
+            <li><a href="#">Verify Certificate</a></li>
+          </ul>
+        </div>
+
+        <div class="tg-footer-col">
+          <h4>Company</h4>
+          <br />
+          <ul>
+            <li><a href="#">About Journey</a></li>
+            <li>
+              <a href="#">Work With Us <span class="badge">Hiring</span></a>
+            </li>
+            <li><a href="#">Privacy & Refund</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="tg-footer-col">
+          <h4>Headquarters</h4>
+          <br />
+          <p class="address">
+            <i class="fas fa-map-marker-alt"></i> Plot No. 45, Tech Zone, Vijay
+            Nagar, Indore - 452010
+          </p>
+          <div class="tg-social-links">
+            <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+            <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+            <a href="#" class="social-icon"><i class="ri-linkedin-fill"></i></a>
+            <a href="#" class="social-icon"
+              ><i class="ri-instagram-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tg-footer-bottom">
+        <div class="bottom-container">
+          <div class="copy-text">
+            <p>
+              Copyright © 2026 <strong>SkillEdge</strong> IT Training &
+              Management System. Registered under Govt. of India.
+            </p>
+          </div>
+          <div class="trust-icons">
+            <span>Trusted By: </span>
+            <i class="fab fa-google" title="Google Partner"
+              ><i class="ri-google-fill"></i
+            ></i>
+            <i class="fab fa-meta" title="Meta"><i class="ri-meta-fill"></i></i>
+            <i class="fab fa-microsoft" title="Microsoft Academy"
+              ><i class="ri-microsoft-fill"></i
+            ></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./javascript/Index.js"></script>
+
+  </body>
+</html>

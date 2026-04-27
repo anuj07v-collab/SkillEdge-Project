@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillEdge | Login</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./CSS/Login.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="wrap">
+        <div class="nav">
+          <div class="logo">
+            <img src="./assets/image/logo.png" alt="logo" />Skill<span>Edge</span>
+          </div>
+
+          <!-- ✅ navbar links connected -->
+          <div class="navLinks">
+            <a href="index.html">Home</a>
+          </div>
+
+          <a href="signup.html"><button class="navBtn">Sign Up</button></a>
+        </div>
+
+        <div class="cardGrid">
+          <div class="imageCard">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80"
+              alt="Learning"
+            />
+            <div class="imageOverlay"></div>
+            <div class="imageText">
+              <h1>Welcome back to <span>SkillEdge</span></h1>
+              <p>
+                Login to continue courses, join live classes, and track your
+                progress with a premium experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="formCard">
+            <div class="formTitle">Login</div>
+            <div class="formSub">Enter your details to continue</div>
+
+            <div class="msg" id="msg"></div>
+
+            <form id="loginForm">
+              <div class="field">
+                <label>Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label>Password</label>
+                <input
+                  type="password"
+                  id="pass"
+                  placeholder="••••••••"
+                  minlength="6"
+                  required
+                />
+              </div>
+
+              <div class="row">
+                <label class="check">
+                  <input type="checkbox" id="remember" />
+                  Remember me
+                </label>
+                <a class="smallLink" href="#">Forgot password?</a>
+              </div>
+
+              <button class="btn" type="submit">Login</button>
+
+              <div class="or">OR Continue with</div>
+
+              <div class="socialRow">
+                <button class="socialBtn" type="button">
+                  <span class="icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 48 48"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill="#EA4335"
+                        d="M24 9.5c3.54 0 6.7 1.22 9.19 3.23l6.86-6.86C36.13 2.34 30.42 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.02 6.22C12.5 13.02 17.82 9.5 24 9.5z"
+                      />
+                      <path
+                        fill="#4285F4"
+                        d="M46.5 24.5c0-1.64-.15-3.22-.43-4.75H24v9h12.62c-.54 2.92-2.21 5.4-4.72 7.07l7.21 5.59C43.73 37.3 46.5 31.44 46.5 24.5z"
+                      />
+                      <path
+                        fill="#FBBC05"
+                        d="M10.58 28.44c-.5-1.48-.78-3.06-.78-4.69s.28-3.21.78-4.69l-8.02-6.22C.91 16.36 0 20.06 0 23.75s.91 7.39 2.56 10.91l8.02-6.22z"
+                      />
+                      <path
+                        fill="#34A853"
+                        d="M24 48c6.42 0 11.8-2.12 15.73-5.77l-7.21-5.59c-2.01 1.35-4.59 2.14-8.52 2.14-6.18 0-11.5-3.52-13.42-8.94l-8.02 6.22C6.51 42.62 14.62 48 24 48z"
+                      />
+                    </svg>
+                  </span>
+                  Google
+                </button>
+
+                <button class="socialBtn" type="button">
+                  <span class="icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill="#1877F2"
+                        d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.1 24 12.07z"
+                      />
+                    </svg>
+                  </span>
+                  Facebook
+                </button>
+
+                <button class="socialBtn" type="button">
+                  <span class="icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill="#111827"
+                        d="M12 .5C5.73.5.75 5.68.75 12.11c0 5.15 3.16 9.52 7.55 11.06.55.1.76-.25.76-.56v-2.1c-3.07.68-3.72-1.26-3.72-1.26-.5-1.33-1.24-1.68-1.24-1.68-1.02-.72.08-.71.08-.71 1.13.08 1.72 1.2 1.72 1.2 1 .76 2.62.54 3.26.41.1-.74.39-1.24.7-1.52-2.45-.29-5.02-1.26-5.02-5.6 0-1.24.43-2.26 1.14-3.05-.11-.29-.5-1.48.11-3.09 0 0 .93-.31 3.05 1.16a10.2 10.2 0 0 1 2.78-.39c.94 0 1.89.13 2.78.39 2.11-1.47 3.04-1.16 3.04-1.16.62 1.61.23 2.8.12 3.09.71.79 1.14 1.81 1.14 3.05 0 4.35-2.58 5.31-5.04 5.59.4.36.76 1.07.76 2.16v3.2c0 .31.2.67.77.56 4.38-1.54 7.54-5.91 7.54-11.06C23.25 5.68 18.27.5 12 .5z"
+                      />
+                    </svg>
+                  </span>
+                  GitHub
+                </button>
+              </div>
+
+              <div class="bottomText">
+                New here? <a href="signup.html">Create an account</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./javascript/Login.js"></script>
+  </body>
+</html>
